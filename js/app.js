@@ -1,3 +1,5 @@
+//Update the text on the "formatted text section" when a user types
+
 textUpdate = () =>{
  
    let text = document.getElementById("text-input").value;
@@ -7,11 +9,17 @@ textUpdate = () =>{
 
 
 
+//Add a bold class to the "formatted text" when clicked
+
 makeBold = (elem) => {
 
     elem.classList.toggle("active");
     document.getElementById("text-output").classList.toggle("bold");
 }
+
+
+
+//Add an Italic class to the "formatted text" when clicked
 
 makeItalic = (elem) => {
 
@@ -19,13 +27,9 @@ makeItalic = (elem) => {
     document.getElementById("text-output").classList.toggle("italic");
 }
 
-/*
-makeUnderline = (elem) => {
-    elem.classList.toggle("active");
-    document.getElementById("text-output").classList.toggle("underline");
-}
 
-*/
+
+//Add underline class to the "formatted text" when clicked using if/else statement
 
 makeUnderline = (elem) => {
     elem.classList.toggle("active");
@@ -39,10 +43,11 @@ makeUnderline = (elem) => {
 }
 
 
-alignText = (elem, alignType) => {
 
-    
-    // console.log(alignType);
+//Add a textAlign class to the "formatted text" when clicked so formatted text can align to right, center, left.
+
+textAlign = (elem, alignType) => {
+
     document.getElementById("text-output").style.textAlign = alignType;
 
     let buttonList = document.getElementsByClassName("align");
@@ -55,15 +60,9 @@ alignText = (elem, alignType) => {
 
     elem.classList.toggle("active");
 
-    
-
-//    let newButtons = Array.from(buttonList);
-
-    newButtons.forEach = (button) => {
-    button.classList.remove("active");
 
 }
-*/
+    */
 
 for(button of buttonList){
     button.classList.remove("active");
